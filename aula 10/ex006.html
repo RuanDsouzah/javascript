@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento DOM</title>
+    <style>
+        .cont{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           flex-direction: row;
+        }
+        #item{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(132, 223, 132);
+            font: normal 20px arial;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div id="item">interaja...</div>
+    </div>
+
+    <script>
+        var a = window.document.getElementById('item')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', saiu)
+        function clicar(){
+            a.innerText = 'clicou'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'entrou'
+        }
+        function saiu(){
+            a.innerText = 'saiu'
+            a.style.background = ' rgb(132, 223, 132)'
+        }
+    </script>
+</body>
+</html>
