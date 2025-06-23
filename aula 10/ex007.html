@@ -9,18 +9,22 @@
     <h1>somando valores</h1>
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="somar" id="S">
     <div id="res">resultado</div>
 
     <script>
+        var B = window.document.getElementById('S')
+        B.addEventListener('click',somar)
+
         function somar(){
-            var tn1 = window.document.getElementById('txtn1')
-            var tn2 = window.document.getElementById('txtn2')
-            var res = window.document.getElementById('res')
-            var N1 = Number(tn1.value)
-            var N2 = Number(tn2.value)
-            var S = N1 + N2
-             res.innerHTML = `a soma entre ${N1} e mais ${N2} é igual a ${S}`
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var R = window.document.getElementById('res')
+        
+        var N1 = Number(tn1.value)
+        var N2 = Number(tn2.value)
+        var tot = N1 + N2
+        R.innerHTML = `a soma entre ${N1} e ${N2} é igual a ${tot}`
         }
     </script>
 </body>
