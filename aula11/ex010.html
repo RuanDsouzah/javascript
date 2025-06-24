@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detran</title>
+</head>
+<body>
+   <h1>sistema de velocidades</h1>
+
+   velocidade do carro: <input type="number" name="vel" id="vel">
+   <input type="button" value="verificar" onclick="somar()">
+   <p id="res">velocidade...</p>
+
+   <script>
+    function somar() {
+        var V = window.document.getElementById('vel')
+        var totvel = Number(V.value)
+        var R = window.document.getElementById('res')
+        
+        if (totvel > 60) {
+            R.innerText = `você ultrapassou a velocidade permitida. MULTADO!`
+        } else {
+            R.innerHTML = `sua velocidade é de ${totvel} Km/h <br/> use sempre o cinto de segurança!`
+        }
+    }
+   </script>
+</body>
+</html>
