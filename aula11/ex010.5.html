@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   qual pais você nasceu? <input type="text" name="pais" id="pais">
+    <input type="button" value="search" onclick="ver()">
+    <p id="C">eu sou... </p>
+
+    <script>
+        function ver() {
+            var UF = window.document.getElementById('pais').value.trim().toLowerCase()
+            var cid = window.document.getElementById('C')
+            
+            if (UF == 'br') {
+                cid.innerHTML += 'brasileiro'
+            } else {
+                cid.innerHTML += 'estrangeiro'
+            }
+        }
+        
+    </script>
+</body>
+</html>
